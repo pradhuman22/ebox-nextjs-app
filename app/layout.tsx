@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Raleway } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 
-const raleway = Raleway({subsets:['latin'],variable:'--font-sans'});
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "ebox",
@@ -15,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={raleway.variable}>
-      <body className="w-full relative antialiased">{children}</body>
+    <html lang="en" suppressHydrationWarning className={jetbrainsMono.variable}>
+      <body className="relative w-full antialiased">{children}</body>
     </html>
   );
 }
