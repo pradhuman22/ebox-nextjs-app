@@ -40,7 +40,7 @@ const Header = () => {
           <span className="sr-only">ebox</span>
         </Link>
         <div className="flex w-full max-w-[calc(50vw+410px)] items-center justify-between">
-          {/* right section  */}
+          {/* left section  */}
           <div>
             <div
               className={cn("flex items-center space-x-2 md:space-x-4", {
@@ -59,7 +59,7 @@ const Header = () => {
               ))}
             </div>
           </div>
-          {/* left section */}
+          {/* right section */}
           <div className="flex items-center gap-3">
             {/* current date, time and timezone display section */}
             <div className="text-muted-foreground hidden text-sm font-medium md:block">
@@ -123,7 +123,7 @@ const Header = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger className="text-muted-foreground hover:text-foreground cursor-pointer">
                   <Avatar className="size-6">
-                    <AvatarImage src={"/"} alt="user" />
+                    <AvatarImage src={"/placeholder.jpg"} alt="user" />
                     <AvatarFallback>U</AvatarFallback>
                   </Avatar>
                 </DropdownMenuTrigger>

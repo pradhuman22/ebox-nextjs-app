@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className="relative w-full antialiased">
         <div className="flex min-h-screen flex-col">
           <Header />
-          <main className="flex-1 grow">{children}</main>
+          <main className="flex-1">{children}</main>
         </div>
       </body>
     </html>
