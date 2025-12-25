@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { JetBrains_Mono } from "next/font/google";
+import Header from "./_components/header";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -19,7 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={jetbrainsMono.variable}>
-      <body className="relative w-full antialiased">{children}</body>
+      <body className="relative w-full antialiased">
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1 grow">{children}</main>
+        </div>
+      </body>
     </html>
   );
 }
