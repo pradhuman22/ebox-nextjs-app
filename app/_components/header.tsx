@@ -40,7 +40,7 @@ const Header = () => {
           <span className="sr-only">ebox</span>
         </Link>
         <div className="flex w-full max-w-[calc(50vw+410px)] items-center justify-between">
-          {/* right section  */}
+          {/* left section  */}
           <div>
             <div
               className={cn("flex items-center space-x-2 md:space-x-4", {
@@ -59,7 +59,7 @@ const Header = () => {
               ))}
             </div>
           </div>
-          {/* left section */}
+          {/* right section */}
           <div className="flex items-center gap-3">
             {/* current date, time and timezone display section */}
             <div className="text-muted-foreground hidden text-sm font-medium md:block">
@@ -77,7 +77,7 @@ const Header = () => {
             >
               <Button
                 asChild
-                className="hover:bg-background group gap-0.5 text-sm font-medium"
+                className="hover:bg-background text-muted-foreground hover:text-foreground group gap-0.5 text-sm font-medium"
                 variant={"ghost"}
               >
                 <Link href={"/discover"}>
@@ -85,7 +85,10 @@ const Header = () => {
                   <IconArrowUpRight />
                 </Link>
               </Button>
-              <Button asChild className="rounded-2xl text-sm font-medium">
+              <Button
+                asChild
+                className="bg-accent text-accent-foreground hover:text-background h-9 rounded-2xl px-3 text-sm font-medium"
+              >
                 <Link href={"/signin"}>Sign In</Link>
               </Button>
             </div>
@@ -111,7 +114,7 @@ const Header = () => {
                 <DropdownMenuContent align="end" className="w-72">
                   <DropdownMenuItem>
                     <div className="space-y-1.5 px-2 py-10 text-center">
-                      <h2 className="text-base font-medium">It's Quite Here</h2>
+                      <h2 className="text-base font-medium">It's Quiet Here</h2>
                       <p className="text-sm">
                         Create an event and invite some friends.
                       </p>
@@ -123,7 +126,7 @@ const Header = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger className="text-muted-foreground hover:text-foreground cursor-pointer">
                   <Avatar className="size-6">
-                    <AvatarImage src={"/"} alt="user" />
+                    <AvatarImage src={"/avatar.svg"} alt="user" />
                     <AvatarFallback>U</AvatarFallback>
                   </Avatar>
                 </DropdownMenuTrigger>
